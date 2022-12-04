@@ -1,5 +1,7 @@
 # ocron
 
+Dockerized cron. Inspired by Gitlab CI 
+
 ### Config example
 
 ```yaml
