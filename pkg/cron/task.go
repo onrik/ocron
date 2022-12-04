@@ -67,7 +67,7 @@ func (t *Task) execOne(command, dir string) error {
 	command, env := fillEnv(command, t.env)
 	t.log([]byte(fmt.Sprintf("$ %s", command)))
 	buff := &bytes.Buffer{}
-	cmd := exec.Command("bash", "-c", command)
+	cmd := exec.Command("sh", "-c", command)
 	cmd.Dir = dir
 	cmd.Env = env
 	cmd.Stdout = buff

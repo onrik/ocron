@@ -10,7 +10,7 @@ FROM peakcom/s5cmd:v2.0.0 as s5cmd
 FROM alpine:3.17
 
 RUN apk update
-RUN apk add postgresql15-client
+RUN apk add postgresql15-client curl
 
 COPY --from=builder /tmp/ocron /usr/bin/ocron
 COPY --from=s5cmd /s5cmd /usr/bin/s5cmd
